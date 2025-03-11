@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'io.bizpeer.test'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots'}
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0-SNAPSHOT'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
